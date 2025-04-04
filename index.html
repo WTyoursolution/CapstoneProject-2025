@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Ai Study Buddy</title>
+  </head>
+  <body class="bg-gray-200 font-[sans-serif] text-center flex flex-col min-h-screen">
+    <header  class="mb-6">
+
+      <h1 class="text-4xl lg:text-7xl md:text-6xl font-bold mt-6 text-pink-500">Ai Study Buddy</h1>
+      <p class="mt-3 text-gray-700 text-lg">
+        Your personal learning assistant for 6th and 7th grade subjects!
+      </p>
+    </header>
+    <main class="flex-1">
+      <section  class="mb-8 px-4">
+        <h2  class="text-2xl font-semibold text-pink-500">What Can AI Study Buddy Do?</h2>
+        <ul class="mt-3 text-sm text-gray-700 space-y-2">
+          <li> Answer questions on Math, Science, English, and History.</li>
+          <li> Provide fun and interactive practice quizzes.</li>
+          <li> Give study tips and tricks to make learning easier.</li>
+          <li> Offer motivational messages to keep you engaged!</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-pink-500">Chat with Your Study Buddy!</h2>
+
+        <div
+          class="mx-auto max-w-lg bg-white rounded-xl shadow-lg p-6 mt-4 border border-gray-300"
+        >
+          <div  class="h-64 overflow-y-auto space-y-3 p-3 bg-gray-100 rounded-md" id="chatHistory">
+            <!-- all chat history will be here -->
+          </div>
+          <input
+          class="flex-1 p-2 border border-pink-500 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            type="text"
+            id="userInput"
+            placeholder="Ask me a study question..."
+            aria-label="Type your message here"
+          />
+          <button class="bg-pink-500 text-white px-4 py-2 rounded-r-md hover:bg-pink-500 transition" id="send" type="button" autofocus>
+            Send
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-6 py-4 text-pink-500 text-sm">&copy; 2025 All Rights Reserved. Created by Keyla Welcome</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
