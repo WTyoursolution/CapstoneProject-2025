@@ -7,7 +7,6 @@ const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("send");
 const chatHistory = []; //in-memory meaning not stored between page reloads
 
-
 //function to add things to local storage
 function addToStorage(sender, text) {
   //adds an object to the chat history array,
@@ -31,7 +30,7 @@ async function fetchApiKey() {
     //request config
     method: "POST", //specifies the request method, POST is  a type of HTTP request used to send data to a server
     headers: { "Content-Type": "application/json" }, //informs the server that the request body is in JSON format
-    body: JSON.stringify({ message: "ilikehorses" }), //use your secret here
+    body: JSON.stringify({ message: "ilikehorses" }), //use your secret here, turns into JSON
   };
   try {
     const res = await fetch(
@@ -57,9 +56,6 @@ async function fetchApiKey() {
 //uses a secret message("ilikehorses") as authentication
 //parses the API key from the responses
 //returns the key (key.gemeni) or null if an error occurs
-
-
-
 
 //Retrieves the API key
 //Sends a structed request to Google gem.2.0
@@ -118,7 +114,6 @@ async function sendMessageToGemeni(userMessage) {
     console.error(error);
   }
 }
-
 
 // sendMessageToGemeni("Hello, are you awake");
 sendBtn.addEventListener("click", () => {
